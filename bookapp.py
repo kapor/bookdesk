@@ -39,22 +39,34 @@ isbn_text=StringVar()
 e6=Entry(window, textvariable="isbn_text")
 e6.grid(row=2, column=3)
 
-list1=Listbox(window, height=20,width=54)
+list1=Listbox(window, height=18,width=54)
 list1.grid(row=3, column=0, rowspan=6, columnspan=4)
 
 sb1=Scrollbar(window)
-sb1.grid(row=3,column=2)
+sb1.grid(row=3,column=4)
 sb1.tkraise()
 
 list1.configure(yscrollcommand=sb1.set)
 sb1.configure(command=list1.yview)
 
 
-b1=Button(window, text="View all", width=12)
+b1=Button(window, text="View all", width=12, height=2)
 b1.grid(row=3, column=6)
 
-b1=Button(window, text="Search entry", width=12)
-b1.grid(row=3, column=6)
+b2=Button(window, text="Search entry", width=12, height=2)
+b2.grid(row=4, column=6)
+
+b3=Button(window, text="Add entry", width=12, height=2)
+b3.grid(row=5, column=6)
+
+b4=Button(window, text="Update", width=12, height=2)
+b4.grid(row=6, column=6)
+
+b5=Button(window, text="Delete", width=12, height=2)
+b5.grid(row=7, column=6)
+
+b6=Button(window, text="Close", width=12, height=2)
+b6.grid(row=8, column=6)
 
 
 
