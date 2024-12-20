@@ -1,6 +1,14 @@
 from tkinter import *
+import be
+
+
+def view_btn():
+    list1.delete(0,END)
+    for row in be.view():
+        list1.insert(END,row)
 
 window=Tk()
+
 
 l1=Label(window, text="Title")
 l1.grid(row=0, column=0)
@@ -50,7 +58,7 @@ list1.configure(yscrollcommand=sb1.set)
 sb1.configure(command=list1.yview)
 
 
-b1=Button(window, text="View all", width=12, height=2)
+b1=Button(window, text="View all", width=12, height=2, command=view_btn)
 b1.grid(row=3, column=6)
 
 b2=Button(window, text="Search entry", width=12, height=2)
