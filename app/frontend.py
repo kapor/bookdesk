@@ -70,8 +70,8 @@ artist_text=StringVar()
 e6=Entry(window,textvariable=artist_text)
 e6.grid(row=2,column=3)
 
-list1=Listbox(window, height=6,width=35)
-list1.grid(row=2,column=0,rowspan=6,columnspan=2)
+list1=Listbox(window, height=10,width=35)
+list1.grid(row=3,column=0,rowspan=6,columnspan=3)
 
 sb1=Scrollbar(window)
 sb1.grid(row=2,column=2,rowspan=6)
@@ -80,6 +80,8 @@ list1.configure(yscrollcommand=sb1.set)
 sb1.configure(command=list1.yview)
 
 # list1.bind('<<ListboxSelect>>',get_selected_row)
+
+
 
 b1=Button(window,text="View all", width=12,command=view_command)
 b1.grid(row=3,column=3)
